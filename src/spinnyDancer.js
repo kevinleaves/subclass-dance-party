@@ -10,7 +10,6 @@ makeSpinnyDancer.prototype = Object.create(makeDancer.prototype);
 makeSpinnyDancer.prototype.constructor = makeSpinnyDancer;
 
 makeSpinnyDancer.prototype.spin = function() {
-  console.log('Spin move');
   // .spin
   var styleSettings = {
     transform: 'rotate(45deg)'
@@ -18,6 +17,12 @@ makeSpinnyDancer.prototype.spin = function() {
 
   this.$node.css(styleSettings)
   // this.$node.css('transform', 'rotate(45deg)')
+
+}
+
+makeSpinnyDancer.prototype.lineup = function(x, y) {
+  console.log('spinny lined up');
+  this.setPosition(x, y)
 }
 
 

@@ -20,4 +20,9 @@ makeBlinkyDancer.prototype.step = function() {
   this.$node.toggle();
 };
 
+makeBlinkyDancer.prototype.lineup = function(x, y) {
+  console.log('blinky lined up!')
+  this.setPosition(x, y)
+}
+
 // lineUp method

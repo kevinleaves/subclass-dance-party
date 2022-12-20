@@ -6,6 +6,22 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
+  $('.dancer').mouseover(function() {
+    console.log('Mouseover Test');
+  // create mouseover
+  //on mouseover
+  // call bustAMove method
+  var styleSettings = {
+    transform: 'scale(2.0)'
+
+  }
+  // makes element larger
+  this.$node.css(styleSettings)
+    // moves to center of dance floor?
+    // set a different CSS animation pattern as a dance this.$node.css(styleSettings) where styleSettings represents the new 'dance'
+    // moves back in line?
+  })
+
 
   this.step();
   // makeDancer is an object with a key step, value for that is is a function

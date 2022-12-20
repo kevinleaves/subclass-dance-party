@@ -19,6 +19,11 @@ makeFlippyDancer.prototype.flip = function() {
   this.$node.css(styleSettings)
 };
 
+makeFlippyDancer.prototype.lineup = function (x, y) {
+  console.log('flippy lined up!')
+  // call set position(top value thats incrementing, 0)
+  this.setPosition(x, y)
+}
 // lineUp method
 // check global window array
 // loop through array

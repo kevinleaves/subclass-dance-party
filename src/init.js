@@ -29,15 +29,34 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+    //select the button w/ jquery
 
-    //create the button w/ jquery
-    // add event handler to button, looping through window.dancers
+
+
     // initialize top value
     // for each dancer,
       // call its lineup method, pass positioning into params
       // increment top value by x pixels
-
-
   });
+
+  $('.lineup').on('click', function(event) {
+    //console.log('lineup clicked')
+    // add event handler to button, looping through window.dancers
+    //console.log(window.dancers, 'dancers array')
+    var yCoordinate = 35;
+    var xCoordinate = 20;
+    for (var i = 0; i < window.dancers.length; i++) {
+      var dancer = window.dancers[i];
+      //console.log(dancer)
+      dancer.lineup(yCoordinate, xCoordinate);
+        // call its lineup method, pass positioning into params
+      yCoordinate+=50;
+    }
+  })
+
+
+
+
 });
 
