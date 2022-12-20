@@ -29,6 +29,15 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    //create the button w/ jquery
+    // add event handler to button, looping through window.dancers
+    // initialize top value
+    // for each dancer,
+      // call its lineup method, pass positioning into params
+      // increment top value by x pixels
+
+
   });
 });
 
