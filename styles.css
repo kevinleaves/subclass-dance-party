@@ -3,6 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
+  display: flex;
+  flex-direction: row-reverse;
   background-color:#444;
   font-size: 18px;
   background-image: url(assets/arenadancefloor.jpeg);
@@ -18,7 +20,7 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   display: flex;
-  flex-direction: row-reverse;
+
   height:32px;
   background-color: #555;
 }
@@ -26,32 +28,35 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid rgb(83, 180, 212);
   border-radius:10px;
   position:absolute;
+  width: 100px;
+  height: 100px;
 }
 .flippy-dancer{
-  border:10px solid gold;
   border-radius:10px;
-  scale: .75;
   position:absolute;
   /*rotate 90deg and do some flips */
   animation: 1s flip infinite
 }
 .spinny-dancer{
-  border:10px solid rgb(168, 95, 168);
   border-radius:10px;
   position:absolute;
-  width: 20px;
-  height: 10px;
   /* rotate 90 degrees every 1s */
-  animation: 1s spin infinite
+  animation: .5s spin infinite
+}
 
+.blinky-dancer {
+
+}
+
+.slow-dance {
+  background-color: pink;
 }
 
 .lineup {
 
-  margin: auto;
+  margin: 0;
   font-weight: bold;
   background-color: red;
   border-radius: 20px;

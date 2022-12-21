@@ -1,7 +1,8 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // call the parent class
   makeDancer.call(this, top, left, timeBetweenSteps)
-
+  this.$node.attr('src', 'assets/flash5.png')
+  this.$node.addClass('blinky-dancer')
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 };
@@ -21,8 +22,5 @@ makeBlinkyDancer.prototype.step = function() {
 };
 
 makeBlinkyDancer.prototype.lineup = function(x, y) {
-  console.log('blinky lined up!')
   this.setPosition(x, y)
 }
-
-// lineUp method

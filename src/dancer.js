@@ -1,27 +1,33 @@
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps) {
-  console.log(this)
 
   this.timeBetweenSteps = timeBetweenSteps;
-
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer"></span>');
-  $('.dancer').mouseover(function() {
-    console.log('Mouseover Test');
-  // create mouseover
-  //on mouseover
-  // call bustAMove method
-  var styleSettings = {
-    transform: 'scale(2.0)'
 
+  this.$node = $('<img class="dancer" src="assets/spiderman.webp"></img>');
+
+  this.$node.hover(function(event) {
+    // convert event target to jquery element
+  var target = $(event.target)
+
+  var styleSettings = {
+    transform: 'scale(2.0)',
+    'box-shadow': '0px 0px 5px #fff',
+    border: 'none'
   }
-  // makes element larger
-  this.$node.css(styleSettings)
-    // moves to center of dance floor?
+
+  target.css(styleSettings)
     // set a different CSS animation pattern as a dance this.$node.css(styleSettings) where styleSettings represents the new 'dance'
     // moves back in line?
-  })
+  }, function(event) {
+    var target = $(event.target)
 
+    var styleSettings = {
+      transform: 'scale(1.0)',
+      'box-shadow': 'none'
+    }
+    target.css(styleSettings)
+  })
 
   this.step();
   // makeDancer is an object with a key step, value for that is is a function
@@ -49,4 +55,17 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-// lineUp method
+makeDancer.prototype.slowDance = function (top, left) {
+  var styleSettings = {
+    'position': 'absolute',
+    left: '0',
+    right: '0',
+    'margin-right': 'auto',
+    'margin-left': 'auto',
+    'width': '100px',
+
+    // 'justify-content': 'center',
+    // 'align-items': 'center';
+  };
+  this.$node.css(styleSettings);
+}
